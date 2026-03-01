@@ -1,22 +1,47 @@
 :root {
   --color-shadow-grey: #1f232a;
   --color-bright-snow: #f5f5f5;
+  --color-blue-slate: #4e596f;
+  --color-charcoal-blue: #3d444d;
+  --color-powder-blue: #A9B5C2;
 }
 
-.sidebar {
-  background-color: var(--color-shadow-grey);
-  color: var(--color-bright-snow);
-  padding-left: 1rem;
+.layout {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.open {
-  max-width: 10rem
+.true {
+  background-color: var(--color-bright-snow);
 }
 
-.closed {
-  max-width: 5rem;
-  height: 100vh;
+.false {
+  background-color: var(--color-shadow-grey);
+}
+
+.true .toggle {
+  color: var(--color-bright-snow);
+  justify-content: flex-end;
+  background-color: var(--color-shadow-grey);
+}
+
+.false .toggle {
+  color: var(--color-shadow-grey);
+  justify-content: flex-start;
+  background-color: var(--color-bright-snow);
+}
+
+.toggle {
+  display: flex;
+  flex-direction: row;
+  width: 6rem;
+  padding: 0.75rem;
+  border-radius: 5rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
 }

@@ -1,26 +1,28 @@
 import { useState } from 'react';
-import { Bars3Icon } from '@heroicons/react/24/outline';
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 import './Sidebar.css';
 
 const Sidebar = () => {
 
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [theme, setTheme] = useState(true);
+  const className = `layout ${theme}`;
 
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar);
+  const toggle = () => {
+    setTheme(!theme);
   };
 
-  console.log(showSidebar);
+  console.log(theme);
 
   return (
-    <div className="layout">
-      {showSidebar ? (
-        <button className="sidebar open" onClick={toggleSidebar}>Open Sidebar</button>
-      ) : (
-        <button className="sidebar closed" onClick={toggleSidebar}><Bars3Icon/>Close Sidebar</button>
-      )}
-    </div>
-  )
-};
+    <div className={className}>
+      <div className="toggle">
+        {theme ? (
+          <MoonIcon className="icon moon" value="false" onClick={toggle} />  
+        ):
+          <SunIcon className="icon sun" value="true" onClick={toggle}/>
+          }
+      </div>
+     </div>
+  )};
 
 export default Sidebar;
