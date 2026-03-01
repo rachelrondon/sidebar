@@ -1,0 +1,22 @@
+:root {
+  --color-shadow-grey: #1f232a;
+  --color-bright-snow: #f5f5f5;
+}
+
+.sidebar {
+  background-color: var(--color-shadow-grey);
+  color: var(--color-bright-snow);
+  padding-left: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.open {
+  max-width: 10rem
+}
+
+.closed {
+  max-width: 5rem;
+  height: 100vh;
+}
