@@ -1,10 +1,10 @@
 import './App.css';
-import Sidebar from './Sidebar.js';
+import Toggle from './Toggle.js';
 
 function App() {
   return (
     <div>
-      <Sidebar />
+      <Toggle />
     </div>
   );
 }
