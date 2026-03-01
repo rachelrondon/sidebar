@@ -4,7 +4,6 @@
  --color-bright-snow: #f5f5f5;
 }
 
-
 .layout {
  align-items: center;
  display: flex;
@@ -12,29 +11,25 @@
  justify-content: center;
 }
 
-
-.true {
+.false {
  background-color: var(--color-bright-snow);
 }
-
-
-.true .toggle {
- background-color: var(--color-shadow-grey);
- color: var(--color-bright-snow);
- justify-content: flex-end;
-}
-
-
-.false {
- background-color: var(--color-shadow-grey);
-}
-
 
 .false .toggle {
- background-color: var(--color-bright-snow);
- color: var(--color-shadow-grey);
+ background-color: var(--color-shadow-grey);
+ color: var(--color-bright-snow);
+ justify-content: flex-start;
 }
 
+.true {
+ background-color: var(--color-shadow-grey);
+}
+
+.true .toggle {
+ background-color: var(--color-bright-snow);
+ color: var(--color-shadow-grey);
+ justify-content: flex-end;
+}
 
 .toggle {
  border-radius: 5rem;
@@ -44,7 +39,7 @@
  width: 6rem;
 }
 
-
 .icon {
  height: 2rem;
  width: 2rem;
+}
